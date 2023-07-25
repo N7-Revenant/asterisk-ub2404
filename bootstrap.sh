@@ -13,4 +13,11 @@ cat /vagrant/asterisk/manager.conf > /etc/asterisk/manager.conf
 
 cat /vagrant/asterisk/sip.conf > /etc/asterisk/sip.conf
 
+cat /vagrant/asterisk/queues.conf > /etc/asterisk/queues.conf
+
+cat /vagrant/asterisk/extensions.conf > /etc/asterisk/extensions.conf
+
 service asterisk restart
+
+asterisk -rx "channel originate Local/add@commands extension s@commands"
+asterisk -rx "queue show SG_Test"
