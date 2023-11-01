@@ -17,6 +17,8 @@ cat /vagrant/asterisk/queues.conf > /etc/asterisk/queues.conf
 
 cat /vagrant/asterisk/extensions.conf > /etc/asterisk/extensions.conf
 
+cat /vagrant/hosts > /etc/hosts
+
 service asterisk restart
 
 asterisk -rx "channel originate Local/add@commands extension s@commands"
