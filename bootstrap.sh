@@ -4,7 +4,7 @@ set -o nounset
 
 wget -qO - http://tc-build.telecontact.ru/linux/debian/repository/repo-keys.asc | tee /etc/apt/trusted.gpg.d/telecc-repo-keys.asc
 
-sh -c "echo 'deb http://tc-build.telecontact.ru/linux/debian/repository/tcdev/build/ lunar main
+sh -c "echo 'deb http://tc-build.telecontact.ru/linux/debian/repository/tcdev/build/ noble main
 '>> /etc/apt/sources.list.d/telecc.list"
 
 apt-get update -y
